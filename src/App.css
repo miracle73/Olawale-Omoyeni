@@ -1,0 +1,16 @@
+.gradient-text {
+    background: linear-gradient(90deg,#4D5BCE, #FFFFFF, #B92A5D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Hide horizontal scrollbar */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+  
