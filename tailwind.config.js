@@ -19,7 +19,10 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'myimage': "url('./src/assets/image/Blog1.png')",
+        'myimage': "url('./src/assets/image/Blog2.png')",
+        'secondMyImage': "url('./src/assets/image/Background.png')",
+        'thirdMyImage': "url('./src/assets/image/Background2.png')",
+        'fourthMyImage': "url('./src/assets/image/Background3.png')"
       }
     },
   },
