@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css';
-import Arrow from './assets/image/arrow.png'
 import Telephone from './assets/image/telephone.png'
 import Mailbox from './assets/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'

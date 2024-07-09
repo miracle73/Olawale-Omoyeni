@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react'
 import './App.css';
 import AI_Image from './assets/image/AI.png'
 import SecondImage from './assets/image/Group.png'
@@ -10,9 +10,8 @@ import Mailbox from './assets/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'
 
 const HomePage = () => {
-  const [count, setCount] = useState(0);
-  const [nav, setNav] = useState(false)
-  const [selectedItem, setSelectedItem] = useState('Home'); // Initial selected item
+
+  const [selectedItem, setSelectedItem] = useState('Home'); 
   const location = useLocation();
 
   useEffect(() => {
@@ -32,7 +31,8 @@ const HomePage = () => {
     // if (process.browser) {
     lastScrollX = window.pageXOffset || window.scrollX;
     const slideer = document.getElementById("sliderItem")
-    slideer && slideer.addEventListener('scroll', function (event) {
+    // event
+    slideer && slideer.addEventListener('scroll', function () {
       let currentScrollX = window.pageXOffset || window.scrollX;
       if (lastScrollX !== currentScrollX) {
         // Horizontal scrolling has occurred

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css';
-import Arrow from './assets/image/arrow.png'
+
 import Telephone from './assets/image/telephone.png'
 import Mailbox from './assets/image/mailbox.png'
 import { Link, useLocation, useParams } from 'react-router-dom'
@@ -77,7 +77,9 @@ const HomePage = () => {
         // if (process.browser) {
         lastScrollX = window.pageXOffset || window.scrollX;
         const slideer = document.getElementById("sliderItem")
-        slideer && slideer.addEventListener('scroll', function (event) {
+    //event
+        slideer && slideer.addEventListener('scroll', function () {
+        
             let currentScrollX = window.pageXOffset || window.scrollX;
             if (lastScrollX !== currentScrollX) {
                 // Horizontal scrolling has occurred
