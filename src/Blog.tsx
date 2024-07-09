@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css';
 import Telephone from '../public/image/telephone.png'
-
+import BlogImage from '../public/image/Blog2.png'
+import BackgroundImage from '../public/image/Background3.png'
 import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -70,7 +71,7 @@ const HomePage = () => {
 
 
     return (
-        <div className="bg-black min-h-screen bg-fourthMyImage w-full pt-10 ">
+        <div className="bg-black min-h-screen w-full pt-10 "  style={{ backgroundImage: `url(${BackgroundImage})` }} >
 
             <div className='w-full flex flex-row justify-center items-center px-20 max-xl:px-10 max-sm:px-4'>
                 <div className='h-14 max-xl:h-12 max-lg:h-10 max-md:h-8 w-1/2 max-lg:w-[65%] max-sm:w-3/4 max-xsm:w-[80%] max-xsxl:w-[92%] rounded-[25px] border-[0.03px] border-[#CBCBCB] bg-[#171717] flex flex-row justify-between items-center px-10 max-lg:px-7 max-md:px-5 max-sm:px-3'>
@@ -113,7 +114,7 @@ const HomePage = () => {
                 {blogs.map((blog, index) => {
                     return (
                         <Link to='/newsletter/43' className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5' key={index}>
-                            <div className="bg-myimage rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
+                            <div style={{ backgroundImage: `url(${BlogImage})` }} className=" rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
                             
                             </div>
                             <div className='py-2 '>

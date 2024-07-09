@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css';
-
+import BlogImage from '../public/image/Blog2.png'
 import Telephone from '../public/image/telephone.png'
 import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation, useParams } from 'react-router-dom'
@@ -16,7 +16,7 @@ const HomePage = () => {
     const location = useLocation();
     console.log(id)
     useEffect(() => {
-        if (location.pathname === '/newsletter/id') {
+        if (location.pathname === `/newsletter/${id}`) {
             setSelectedItem('Newsletters');
         }
     }, [location.pathname]);
@@ -162,7 +162,7 @@ const HomePage = () => {
                         return (
                             <div id="sliderItem"  key={index} className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block mx-3'>
                                 <Link to='/newsletter/43' className='pt-5'>
-                                    <div className="bg-myimage rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
+                                    <div style={{ backgroundImage: `url(${BlogImage})` }} className="rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
 
                                     </div>
                                     <div className='py-2 '>
