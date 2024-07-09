@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import './App.css';
 import Telephone from '../public/image/telephone.png'
-import BlogImage from '../public/image/Blog2.png'
-import BackgroundImage from '../public/image/Background3.png'
+import BlogImage from '../public/image/mode.png'
+import BackgroundImage from '../public/image/real.png'
 import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'
+import { FaLinkedinIn } from "react-icons/fa";
+import { RiMediumFill } from "react-icons/ri";
 
 
 
@@ -71,7 +73,7 @@ const HomePage = () => {
 
 
     return (
-        <div className="bg-black min-h-screen w-full pt-10 "  style={{ backgroundImage: `url(${BackgroundImage})` }} >
+        <div className="bg-black min-h-screen w-full pt-10 " style={{ backgroundImage: `url(${BackgroundImage})` }} >
 
             <div className='w-full flex flex-row justify-center items-center px-20 max-xl:px-10 max-sm:px-4'>
                 <div className='h-14 max-xl:h-12 max-lg:h-10 max-md:h-8 w-1/2 max-lg:w-[65%] max-sm:w-3/4 max-xsm:w-[80%] max-xsxl:w-[92%] rounded-[25px] border-[0.03px] border-[#CBCBCB] bg-[#171717] flex flex-row justify-between items-center px-10 max-lg:px-7 max-md:px-5 max-sm:px-3'>
@@ -115,7 +117,7 @@ const HomePage = () => {
                     return (
                         <Link to='/newsletter/43' className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5' key={index}>
                             <div style={{ backgroundImage: `url(${BlogImage})` }} className=" rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
-                            
+
                             </div>
                             <div className='py-2 '>
                                 <div className='bg-[#F2F4F7] rounded-3xl h-fit w-fit p-3 flex flex-row justify-center items-center'>
@@ -161,15 +163,26 @@ const HomePage = () => {
                 </div>
 
             </div>
-            <div className='mt-20 gap-6 py-6 px-6 rounded-t-[33px] bg-[#161515] flex flex-row justify-start items-center max-md:flex-col max-md:items-start'>
-                <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Contact me: </p>
-                <div className='flex flex-row justify-start items-center gap-4'>
-                    <img src={Mailbox} />
-                    <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> visitolawaleomoyeni@gmail.com          </p>
+            <div className='mt-20 py-6 px-6 rounded-t-[33px] bg-[#161515] '>
+                <div className='gap-6  flex flex-row justify-start items-center max-md:flex-col max-md:items-start'>
+                    <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Contact me via: </p>
+                    <div className='flex flex-row justify-start items-center gap-4'>
+                        <img src={Mailbox} />
+                        <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> visitolawaleomoyeni@gmail.com          </p>
+                    </div>
+                    <div className='flex flex-row justify-start items-center gap-4'>
+                        <img src={Telephone} />
+                        <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
+                    </div>
                 </div>
-                <div className='flex flex-row justify-start items-center gap-4'>
-                    <img src={Telephone} />
-                    <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
+                <div className=' mt-3 max-md:mt-8 flex flex-row justify-start  items-center gap-4  '>
+                    <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Follow me on: </p>
+                    <Link to='https://medium.com/@olawaleomoyeni.o/' target='_blank'>
+                        <RiMediumFill className='text-white max-md:h-3 max-md:w-3' />
+                    </Link>
+                    <Link to='https://linkedin.com/in/olawale-omoyeni-148b851b2' target='_blank'>
+                        <FaLinkedinIn className='text-white max-md:h-3 max-md:w-3' />
+                    </Link>
                 </div>
             </div>
         </div>

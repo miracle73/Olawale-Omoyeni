@@ -1,14 +1,19 @@
 import { useState, useEffect } from 'react'
 import './App.css';
-import BlogImage from '../public/image/Blog2.png'
+import BlogImage from '../public/image/mode.png'
 import Telephone from '../public/image/telephone.png'
+import Perimeter from '../public/image/perimeter.png'
 import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation, useParams } from 'react-router-dom'
+import BackgroundImage from '../public/image/real.png'
+import { FaLinkedinIn } from "react-icons/fa";
+import { RiMediumFill } from "react-icons/ri";
+
 
 interface Params extends Record<string, string | undefined> {
     id: string;
-  }
-  
+}
+
 
 const HomePage = () => {
     const { id } = useParams<Params>();
@@ -77,9 +82,9 @@ const HomePage = () => {
         // if (process.browser) {
         lastScrollX = window.pageXOffset || window.scrollX;
         const slideer = document.getElementById("sliderItem")
-    //event
+        //event
         slideer && slideer.addEventListener('scroll', function () {
-        
+
             let currentScrollX = window.pageXOffset || window.scrollX;
             if (lastScrollX !== currentScrollX) {
                 // Horizontal scrolling has occurred
@@ -92,7 +97,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className="bg-black min-h-screen bg-fourthMyImage w-full pt-10 ">
+        <div className="bg-black min-h-screen w-full pt-10 " style={{ backgroundImage: `url(${BackgroundImage})` }}>
 
             <div className='w-full flex flex-row justify-center items-center px-20 max-xl:px-10 max-sm:px-4'>
                 <div className='h-14 max-xl:h-12 max-lg:h-10 max-md:h-8 w-1/2 max-lg:w-[65%] max-sm:w-3/4 max-xsm:w-[80%] max-xsxl:w-[92%] rounded-[25px] border-[0.03px] border-[#CBCBCB] bg-[#171717] flex flex-row justify-between items-center px-10 max-lg:px-7 max-md:px-5 max-sm:px-3'>
@@ -143,6 +148,10 @@ const HomePage = () => {
                     Modular grid extends the column grid further by adding rows to it. This intersection of columns and rows make up modules to which elements and content are aligned. Modular grids are great for ecommerce and listing pages, as rows are repeatable to accommodate browsing.
                     Hierarchical grid: Content is organized by importance using columns, rows, and modules. The most important elements and pieces of content take up the biggest pieces of the grid.
                     Breaking Down the Grid
+                </p>
+                
+                <img src={Perimeter} className='mt-3' />
+                <p className='font-[Inter] font-[400] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-[#FFFFFF] mt-5'>
                     Regardless of the type of grid you are using, the grid is made up of three elements: columns, gutters, and margins.
                     Columns: Columns take up most of the real estate in a grid. Elements and content are placed in columns. To adapt to any screen size, column widths are generally defined with percentages rather than fixed values and the number of columns will vary. For example, a grid on a mobile device might have 4 columns and a grid on a desktop might have 12 columns.
                     Gutters: The gutter is the space between columns that separates elements and content from different columns. Gutter widths are fixed values but can change based on different breakpoints. For example, wider gutters are appropriate for larger screens, whereas smaller gutters are appropriate for smaller screens like mobile.
@@ -160,7 +169,7 @@ const HomePage = () => {
                     {/* <div className="flex w-full flex-row gap-10 max-md:gap-14 max-sm:gap-0 flex-wrap justify-between max-md:justify-around max-sm:justify-between items-center px-20 max-xl:px-10 max-sm:px-4 mt-10"> */}
                     {blogs.map((blog, index) => {
                         return (
-                            <div id="sliderItem"  key={index} className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block mx-3'>
+                            <div id="sliderItem" key={index} className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block mx-3'>
                                 <Link to='/newsletter/43' className='pt-5'>
                                     <div style={{ backgroundImage: `url(${BlogImage})` }} className="rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
 
@@ -215,15 +224,26 @@ const HomePage = () => {
                 </div>
 
             </div>
-            <div className='mt-20 gap-6 py-6 px-6 rounded-t-[33px] bg-[#161515] flex flex-row justify-start items-center max-md:flex-col max-md:items-start'>
-                <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Contact me: </p>
-                <div className='flex flex-row justify-start items-center gap-4'>
-                    <img src={Mailbox} />
-                    <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> visitolawaleomoyeni@gmail.com          </p>
+            <div className='mt-20 py-6 px-6 rounded-t-[33px] bg-[#161515] '>
+                <div className='gap-6  flex flex-row justify-start items-center max-md:flex-col max-md:items-start'>
+                    <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Contact me via: </p>
+                    <div className='flex flex-row justify-start items-center gap-4'>
+                        <img src={Mailbox} />
+                        <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> visitolawaleomoyeni@gmail.com          </p>
+                    </div>
+                    <div className='flex flex-row justify-start items-center gap-4'>
+                        <img src={Telephone} />
+                        <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
+                    </div>
                 </div>
-                <div className='flex flex-row justify-start items-center gap-4'>
-                    <img src={Telephone} />
-                    <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
+                <div className=' mt-3 max-md:mt-8 flex flex-row justify-start  items-center gap-4  '>
+                    <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Follow me on: </p>
+                    <Link to='https://medium.com/@olawaleomoyeni.o/' target='_blank'>
+                        <RiMediumFill className='text-white max-md:h-3 max-md:w-3' />
+                    </Link>
+                    <Link to='https://linkedin.com/in/olawale-omoyeni-148b851b2' target='_blank'>
+                        <FaLinkedinIn className='text-white max-md:h-3 max-md:w-3' />
+                    </Link>
                 </div>
             </div>
         </div>

@@ -10,6 +10,8 @@ import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'
 import Background from '../public/image/Background.png'
 import Background2 from '../public/image/Background2.png'
+import { FaLinkedinIn } from "react-icons/fa";
+import { RiMediumFill } from "react-icons/ri";
 const HomePage = () => {
 
   const [selectedItem, setSelectedItem] = useState('Home');
@@ -326,15 +328,26 @@ const HomePage = () => {
           </div>
 
         </div>
-        <div className='mt-20 gap-6 py-6 px-6 rounded-t-[33px] bg-[#161515] flex flex-row justify-start items-center max-md:flex-col max-md:items-start'>
-          <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Contact me: </p>
-          <div className='flex flex-row justify-start items-center gap-4'>
-            <img src={Mailbox} />
-            <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> visitolawaleomoyeni@gmail.com          </p>
+        <div className='mt-20 py-6 px-6 rounded-t-[33px] bg-[#161515] '>
+          <div className='gap-6  flex flex-row justify-start items-center max-md:flex-col max-md:items-start'>
+            <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Contact me via: </p>
+            <div className='flex flex-row justify-start items-center gap-4'>
+              <img src={Mailbox} />
+              <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> visitolawaleomoyeni@gmail.com          </p>
+            </div>
+            <div className='flex flex-row justify-start items-center gap-4'>
+              <img src={Telephone} />
+              <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
+            </div>
           </div>
-          <div className='flex flex-row justify-start items-center gap-4'>
-            <img src={Telephone} />
-            <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
+          <div className=' mt-3 max-md:mt-8 flex flex-row justify-start  items-center gap-4  '>
+            <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Follow me on: </p>
+            <Link to='https://medium.com/@olawaleomoyeni.o/' target='_blank'>
+              <RiMediumFill className='text-white max-md:h-3 max-md:w-3' />
+            </Link>
+            <Link to='https://linkedin.com/in/olawale-omoyeni-148b851b2' target='_blank'>
+              <FaLinkedinIn className='text-white max-md:h-3 max-md:w-3' />
+            </Link>
           </div>
         </div>
       </div>
