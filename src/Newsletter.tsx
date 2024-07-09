@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css';
 
-import Telephone from './assets/image/telephone.png'
-import Mailbox from './assets/image/mailbox.png'
+import Telephone from '../public/image/telephone.png'
+import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation, useParams } from 'react-router-dom'
 
 interface Params extends Record<string, string | undefined> {
@@ -153,9 +153,9 @@ const HomePage = () => {
                     Always place content within columns, not gutters. The gutters should remain empty as you place elements on the grid in order to clearly separate and align content and elements.
                 </p>
             </div>
-            <p className='font-[600] font-[Poppins] text-[24px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[12px] text-white pt-20 px-20 max-xl:px-10 max-sm:px-4'>Recent Newsletters</p>
-            <div className='flex flex-col items-center justify-between gap-4 relative pt-5'>
-                <div className='w-full p-4 overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide ' >
+            <p className='font-[600] font-[Poppins] text-[24px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[12px] text-white pt-20 mx-10 max-md:mx-4'>Recent Newsletters</p>
+            <div className='flex flex-col mx-10 max-md:mx-4 items-center justify-between gap-4 relative pt-5'>
+                <div className='w-full  overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide ' >
 
                     {/* <div className="flex w-full flex-row gap-10 max-md:gap-14 max-sm:gap-0 flex-wrap justify-between max-md:justify-around max-sm:justify-between items-center px-20 max-xl:px-10 max-sm:px-4 mt-10"> */}
                     {blogs.map((blog, index) => {
@@ -193,7 +193,7 @@ const HomePage = () => {
             </div>
 
 
-            <div className='mt-18 max-md:mt-14 pt-10 px-20 max-xl:px-10 max-sm:px-4'>
+            <div className='mt-18 max-md:mt-14 pt-10 mx-10 max-md:mx-4'>
 
                 <p className='text-[#9259F7] font-[600] text-[36px]  max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'>CONTACT ME </p>
                 <div className='mt-10'>

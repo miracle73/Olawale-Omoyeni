@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css';
-import Telephone from './assets/image/telephone.png'
-import Mailbox from './assets/image/mailbox.png'
+import Telephone from '../public/image/telephone.png'
+
+import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'
 
 

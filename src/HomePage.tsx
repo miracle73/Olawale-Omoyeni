@@ -1,12 +1,12 @@
 import  { useState, useEffect } from 'react'
 import './App.css';
-import AI_Image from './assets/image/AI.png'
-import SecondImage from './assets/image/Group.png'
-import Specialist from './assets/image/Specialist.png'
-import Vector from './assets/image/Vector.png'
-import Frame from './assets/image/Frame.png'
-import Telephone from './assets/image/telephone.png'
-import Mailbox from './assets/image/mailbox.png'
+import AI_Image from '../public/image/AI.png'
+import SecondImage from '../public/image/Group.png'
+import Specialist from '../public/image/Specialist.png'
+import Vector from '../public/image/Vector.png'
+import Frame from '../public/image/Frame.png'
+import Telephone from '../public/image/telephone.png'
+import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'
 
 const HomePage = () => {

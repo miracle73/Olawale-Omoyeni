@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import b from './public/image'
 export default {
   content: [
     "./index.html",
@@ -19,10 +20,10 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'myimage': "url('./src/assets/image/Blog2.png')",
-        'secondMyImage': "url('./src/assets/image/Background.png')",
-        'thirdMyImage': "url('./src/assets/image/Background2.png')",
-        'fourthMyImage': "url('./src/assets/image/Background3.png')"
+        'myimage': "url('./public/image/Blog2.png')",
+        'secondMyImage': "url('./public/image/Background.png')",
+        'thirdMyImage': "url('./public/image/Background2.png')",
+        'fourthMyImage': "url('./public/image/Background3.png')"
       }
     },
   },
