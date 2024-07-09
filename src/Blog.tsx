@@ -112,7 +112,7 @@ const HomePage = () => {
             <div className="flex w-full flex-row gap-10 max-md:gap-14 max-sm:gap-0 flex-wrap justify-between max-md:justify-around max-sm:justify-between items-center px-20 max-xl:px-10 max-sm:px-4 mt-10">
                 {blogs.map((blog, index) => {
                     return (
-                        <Link to='/newsletter/id' className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5' key={index}>
+                        <Link to='/newsletter/43' className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5' key={index}>
                             <div className="bg-myimage rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
                             
                             </div>

@@ -3,15 +3,18 @@ import './App.css';
 import Arrow from './assets/image/arrow.png'
 import Telephone from './assets/image/telephone.png'
 import Mailbox from './assets/image/mailbox.png'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 
-
+interface Params extends Record<string, string | undefined> {
+    id: string;
+  }
+  
 
 const HomePage = () => {
-
+    const { id } = useParams<Params>();
     const [selectedItem, setSelectedItem] = useState('Home');
     const location = useLocation();
-
+    console.log(id)
     useEffect(() => {
         if (location.pathname === '/newsletter/id') {
             setSelectedItem('Newsletters');
@@ -155,8 +158,8 @@ const HomePage = () => {
                     {/* <div className="flex w-full flex-row gap-10 max-md:gap-14 max-sm:gap-0 flex-wrap justify-between max-md:justify-around max-sm:justify-between items-center px-20 max-xl:px-10 max-sm:px-4 mt-10"> */}
                     {blogs.map((blog, index) => {
                         return (
-                            <div id="sliderItem" className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block mx-3'>
-                                <Link to='/newsletter/id' className='pt-5' key={index}>
+                            <div id="sliderItem"  key={index} className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block mx-3'>
+                                <Link to='/newsletter/43' className='pt-5'>
                                     <div className="bg-myimage rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
 
                                     </div>
