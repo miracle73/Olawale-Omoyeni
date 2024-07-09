@@ -72,7 +72,7 @@ const HomePage = () => {
     return (
         <div className="bg-black min-h-screen bg-fourthMyImage w-full pt-10 ">
 
-            <div className='w-full flex fixed top-10 flex-row justify-center items-center px-20 max-xl:px-10 max-sm:px-4'>
+            <div className='w-full flex flex-row justify-center items-center px-20 max-xl:px-10 max-sm:px-4'>
                 <div className='h-14 max-xl:h-12 max-lg:h-10 max-md:h-8 w-1/2 max-lg:w-[65%] max-sm:w-3/4 max-xsm:w-[80%] max-xsxl:w-[92%] rounded-[25px] border-[0.03px] border-[#CBCBCB] bg-[#171717] flex flex-row justify-between items-center px-10 max-lg:px-7 max-md:px-5 max-sm:px-3'>
                     <Link to="/"
                         className={`font-[400] text-[15px] max-xl:text-[13px] max-lg:text-[11px] max-md:text-[9px] max-xsm:text-[8px] font-[Poppins] text-white ${selectedItem === 'Home' ? 'bg-[#9259F7] px-1 py-1  md:px-2  md:py-2 rounded-2xl md:rounded-[22px]' : ''
@@ -107,12 +107,12 @@ const HomePage = () => {
             </div>
 
 
-            <p className='font-[600] font-[Poppins] text-[24px] text-white pt-32 px-20 max-xl:px-10 max-sm:px-4'>All Newsletters</p>
+            <p className='font-[600] font-[Poppins] text-[24px]  max-lg:text-[22px] max-md:text-[20px] max-sm:text-[18px] text-white pt-16 px-20 max-xl:px-10 max-sm:px-4'>All Newsletters</p>
 
             <div className="flex w-full flex-row gap-10 max-md:gap-14 max-sm:gap-0 flex-wrap justify-between max-md:justify-around max-sm:justify-between items-center px-20 max-xl:px-10 max-sm:px-4 mt-10">
                 {blogs.map((blog, index) => {
                     return (
-                        <div className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5' key={index}>
+                        <Link to='/newsletter/id' className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5' key={index}>
                             <div className="bg-myimage rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
                             
                             </div>
@@ -132,7 +132,7 @@ const HomePage = () => {
                                 </div>
                                 <p className='text-[#FFFFFF] font-[400] font-[Poppins] text-[24px] max-lg:text-[18px] max-md:text-[14px] max-sm:text-[12px] pt-2'>{blog.text3}</p>
                             </div>
-                        </div>
+                        </Link>
 
                     )
                 })}
@@ -149,11 +149,11 @@ const HomePage = () => {
 
                 </div>
                 <div className='mt-10 flex flex-row justify-start gap-6 items-center'>
-                    <div className='h-[55px] w-fit max-md:h-fit max-md:py-4 px-4 border border-[#585858] rounded-[50px] flex flex-row justify-center gap-4 items-center bg-black'>
+                    <div className='h-[55px] w-fit max-md:h-fit max-md:py-4 px-4 border border-[#585858] rounded-[50px] flex flex-row justify-center gap-4 max-sm:gap-1 items-center bg-black'>
                         <img src={Mailbox} />
                         <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] max-sm:text-[8px] max-xsm:text-[7px]  font-[Poppins] '> Send an email </p>
                     </div>
-                    <div className='h-[55px] w-fit px-4 max-md:h-fit max-md:py-4 border border-[#585858] rounded-[50px] flex flex-row justify-center gap-4 items-center bg-black'>
+                    <div className='h-[55px] w-fit px-4 max-md:h-fit max-md:py-4 border border-[#585858] rounded-[50px] flex flex-row justify-center gap-4 max-sm:gap-1 items-center bg-black'>
                         <img src={Telephone} />
                         <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] max-sm:text-[8px] max-xsm:text-[7px] font-[Poppins] '> 1 (646) 290-0518 </p>
                     </div>
