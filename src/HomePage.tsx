@@ -92,7 +92,7 @@ const HomePage = () => {
         <div className='w-1/2 max-lg:w-[55%] max-md:w-[100%] flex flex-col gap-4'>
           <p className='text-[#E5E9F0] font-[400] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px] font-[Poppins]'>Hi all. I am</p>
           <p className='text-[#E5E9F0] font-[600] text-[52px] max-xl:text-[48px] max-lg:text-[44px] max-md:text-[40px] max-sm:text-[28px] max-xsm:text-[20px] font-[Poppins]'>Olawale O. Omoyeni,</p>
-          <img src={Specialist} className=' w-44' />
+    
           <p className='text-[#FFFFFF] font-[400] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] font-[Poppins]'>AI expert currently pursuing a PhD in Information Technology & Artificial Intelligence, with hands-on experience in machine learning, data analysis, and statistical modeling.</p>
           <div className='h-[55px] w-[190px] max-sm:w-fit max-sm:h-fit max-sm:py-4 max-sm:px-4 border border-[#585858] rounded-[80px] flex flex-row justify-center items-center'>
             <p className='text-[#FFFFFF] font-[500] text-[15px] max-xl:text-[13px] max-lg:text-[11px] max-md:text-[9px] font-[Poppins] text-center'>Olawale O. Omoyeni</p>
