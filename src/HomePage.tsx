@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import './App.css';
 import AI_Image from '../public/image/AI.png'
 import SecondImage from '../public/image/Group.png'
-import Specialist from '../public/image/Specialist.png'
+// import Specialist from '../public/image/Specialist.png'
+import { FaXTwitter } from "react-icons/fa6";
 import Vector from '../public/image/Vector.png'
 import Frame from '../public/image/Frame.png'
 import Telephone from '../public/image/telephone.png'
@@ -92,7 +93,7 @@ const HomePage = () => {
         <div className='w-1/2 max-lg:w-[55%] max-md:w-[100%] flex flex-col gap-4'>
           <p className='text-[#E5E9F0] font-[400] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px] font-[Poppins]'>Hi all. I am</p>
           <p className='text-[#E5E9F0] font-[600] text-[52px] max-xl:text-[48px] max-lg:text-[44px] max-md:text-[40px] max-sm:text-[28px] max-xsm:text-[20px] font-[Poppins]'>Olawale O. Omoyeni,</p>
-    
+
           <p className='text-[#FFFFFF] font-[400] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] font-[Poppins]'>AI expert currently pursuing a PhD in Information Technology & Artificial Intelligence, with hands-on experience in machine learning, data analysis, and statistical modeling.</p>
           <div className='h-[55px] w-[190px] max-sm:w-fit max-sm:h-fit max-sm:py-4 max-sm:px-4 border border-[#585858] rounded-[80px] flex flex-row justify-center items-center'>
             <p className='text-[#FFFFFF] font-[500] text-[15px] max-xl:text-[13px] max-lg:text-[11px] max-md:text-[9px] font-[Poppins] text-center'>Olawale O. Omoyeni</p>
@@ -132,60 +133,60 @@ const HomePage = () => {
           </div>
           <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>. Databases: MySQL, PostgreSQL</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>. Adversarial Machine Learning</p>
             </div>
             <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Familiarity with NIST Cybersecurity Framework, ISO27001, PCI DSS, SOC1 and SOC 2              </p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· AI Security & Threat Modeling</p>
 
             </div>
           </div>
           <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· SIEM, firewalls, IDS/IPS, vulnerability assessment, and encryption</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Ethical AI Techniques</p>
             </div>
             <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Project Management Tools & Technologies: Jupyter Notebooks, Git, Linux, Microsoft Office Suite, Wrike              </p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Deep Learning</p>
             </div>
           </div>
           <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Data Analysis & Visualization: Pandas, NumPy, Matplotlib, Seaborn, Tableau, Power BI              </p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Large Language Model (LLM)</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 ma  max-md:w-[100%]'>
 
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Statistical Analysis: Regression Analysis, Classification Analysis, and Cluster Analysis              </p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Generative AI</p>
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Machine Learning: Scikit-learn, TensorFlow, Keras, PyTorch</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Machine Learning</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Soft Skills: Analytical Thinking, Problem Solving, Communication, Team Collaboration</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Project Management Tools & Technologies</p>
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Large Language Models (LLMs): OpenAI GPT-3, Google AI Meena, TensorFlow Hub (variety of pre-trained LLMs)</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Statistical Analysis</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Generative AI Frameworks: TensorFlow Generative Adversarial Networks (GANs), PyTorch StyleGAN, Stable Diffusion</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· NIST Cybersecurity Framework, ISO27001, PCI DSS, SOC1 and SOC 2</p>
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-24'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Ethical AI Techniques: Fairness, Accountability, Transparency, Explainability (FATE) principles, Bias detection and mitigation tools (e.g., IBM Fairness 360)</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Natural Language Processing (NLP)</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Deep Learning Frameworks for Responsible AI: TensorFlow Ethical AI Toolkit, PyTorch Responsible AI libraries (interpretml, captum)</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· AI Ethics and Governance</p>
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Adversarial Machine Learning: Fast Gradient Sign Method (FGSM), DeepFool, Carlini-Wagner Attack</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Responsible AI</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· AI Security & Threat Modeling: STRIDE threat modeling framework, adversarial training techniques for robustness</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Computer Vision</p>
             </div>
           </div>
 
@@ -270,7 +271,13 @@ const HomePage = () => {
                 <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>May 2023 – Dec 2025(4.0GPA)
                 </p>
               </div>
-           
+              <div className='mt-10'>
+                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>PC AGE Career Institute - Jersey City, NJ
+                </p>
+                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#3A49A4]'>Certificate in Information Technology
+                </p>
+              </div>
+
             </div>
             <img src={Frame} className='max-md:hidden' />
             <div className='w-1/2 max-md:w-[100%] pl-20  max-md:pl-0 max-md:mt-10 flex flex-col h-full justify-between'>
@@ -286,12 +293,7 @@ const HomePage = () => {
                 <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>Completed 2022 (3.96 GPA)
                 </p>
               </div>
-              <div className='mt-10'>
-                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>PC AGE Career Institute - Jersey City, NJ
-                </p>
-                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#3A49A4]'>Certificate in Information Technology
-                </p>
-              </div>
+
               <div className='mt-10'>
                 <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>Ekiti State University
                 </p>
@@ -329,9 +331,15 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <p className='font-[Poppins] font-[500] text-[16px]  max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#FFFFFF] mt-10 max-md:mt-6 px-20 max-xl:px-10 max-sm:px-4'>
-          Olawale's comprehensive background in IT controls, cybersecurity, and risk management, coupled with his academic pursuits in Artificial Intelligence, position him as a valuable asset capable of contributing significantly to any team. His technical expertise, practical experience, and commitment to excellence in education make him well-suited to shape the next generation of IT, Artificial Intelligence, and cybersecurity professionals.
-        </p>
+        <div className='mt-10 max-md:mt-28 max-xsm:mt-36 pt-10 px-20 max-xl:px-10 max-sm:px-4'>
+
+          <p className='text-[#9259F7] font-[600] text-[36px] max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'>SKILLS</p>
+          <p className='font-[Poppins] font-[500] text-[16px]  max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#FFFFFF] mt-10 max-md:mt-6 px-20 max-xl:px-10 max-sm:px-4'>
+
+            OpenAI · GPT · TensorFlow · Pytorch · IBM Fairness 360 · STRIDE threat modeling framework · Data Analysis & Visualization · Python · SQL · Keras · Scikit-learn · PowerBI · Jupyter Notebooks · Git · Linux · Microsoft Office Suite · Wrike · Pandas · NumPy · Matplotlib · Seaborn · Tableau · Power BI · Machine Learning · Deep Learning · Python · NLP · Transformers · GANs · VAEs · GPT-3 · GPT-4 · BERT · Prompt Engineering · Model Training · Fine-Tuning · Transfer Learning · OpenCV · Image Classification · Feature Extraction · Data Preprocessing · Data Augmentation · Ethical AI · Bias Mitigation · API Integration · Scalability ·  Evaluation Metrics · Model Validation ·  Generative Adversarial Networks · Variational Autoencoders · Autoregressive Models · Responsible AI Principles · AI Governance · Bias Detection · Bias Mitigation · Ethical AI Frameworks · AI Risks · AI algorithm audit · HuggingFace · Third-party Risk Assesment · IT General Controls
+          </p>
+        </div>
+
         <div id="contact" className='mt-32 max-md:mt-20 pt-10 px-20 max-xl:px-10 max-sm:px-4'>
 
           <p className='text-[#9259F7] font-[600] text-[36px]  max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'>CONTACT ME </p>
@@ -365,6 +373,7 @@ const HomePage = () => {
               <img src={Telephone} />
               <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
             </div>
+            
           </div>
           <div className=' mt-3 max-md:mt-8 flex flex-row justify-start  items-center gap-4  '>
             <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Follow me on: </p>
@@ -373,6 +382,9 @@ const HomePage = () => {
             </Link>
             <Link to='https://linkedin.com/in/olawale-omoyeni-148b851b2' target='_blank'>
               <FaLinkedinIn className='text-white max-md:h-3 max-md:w-3' />
+            </Link>
+            <Link to='https://x.com/Waleomoyeni1?t=jE6uUR5D866-5zQkoee9FA&s=08' target='_blank'>
+              <FaXTwitter className='text-white max-md:h-3 max-md:w-3' />
             </Link>
           </div>
         </div>
