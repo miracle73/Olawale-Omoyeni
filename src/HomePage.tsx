@@ -109,8 +109,7 @@ const HomePage = () => {
         <div className='w-1/2 max-lg:w-[55%] max-md:w-[100%]  flex flex-col justify-start gap-8'>
           <p className='text-[#9259F7] font-[600] text-[36px] max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'> About Me</p>
           <p className='text-[#FFFFFF] font-[400]  text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px] font-[Poppins]'>
-            I am a Ph.D. candidate specializing in Machine Learning, Generative AI, AI assurance, responsible AI concentrating on adversarial AI and an adjunct instructor. My professional background includes extensive experience in IT risk and compliance, GRC (Governance, Risk Management, and Compliance), and TPRM (Third Party Risk Management).
-            I bring a profound understanding of machine learning, generative AI, and the critical aspects of AI assurance. This includes managing risks, ensuring ethical development, and mitigating bias in AI systems. My strong theoretical foundation is coupled with practical skills in programming, data analysis, and threat modeling, making me a valuable asset to any team seeking to develop and deploy trustworthy AI.
+            I am a Ph.D. candidate specializing in Generative AI, Machine learning, AI assurance, responsible AI concentrating on adversarial AI and an adjunct instructor. My professional background includes extensive experience in IT risk and compliance, GRC (Governance, Risk Management, and Compliance), and TPRM (Third Party Risk Management). I bring a profound understanding of machine learning, generative AI, and the critical aspects of AI assurance. This includes managing risks, ensuring ethical development, and mitigating bias in AI systems. My strong theoretical foundation is coupled with practical skills in programming, data analysis, and threat modeling, making me a valuable asset to any team seeking to develop and deploy sustainable AI.
           </p>
         </div>
         <div className='w-1/2 max-lg:w-[40%] max-md:w-[100%] max-md:pt-10  flex flex-row justify-center max-md:justify-start items-start'>
@@ -163,7 +162,7 @@ const HomePage = () => {
               <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Machine Learning</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Project Management Tools & Technologies</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Project Management </p>
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
@@ -374,7 +373,7 @@ const HomePage = () => {
               <img src={Telephone} />
               <p className='text-[#FFFFFF] font-[300] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Inter] '> 1 (646) 290-0518   </p>
             </div>
-            
+
           </div>
           <div className=' mt-3 max-md:mt-8 flex flex-row justify-start  items-center gap-4  '>
             <p className='text-[#FFFFFF] font-[600] text-[16px]   max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px]  font-[Poppins] '> Follow me on: </p>
