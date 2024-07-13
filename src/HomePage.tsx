@@ -109,7 +109,7 @@ const HomePage = () => {
         <div className='w-1/2 max-lg:w-[55%] max-md:w-[100%]  flex flex-col justify-start gap-8'>
           <p className='text-[#9259F7] font-[600] text-[36px] max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'> About Me</p>
           <p className='text-[#FFFFFF] font-[400]  text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px] font-[Poppins]'>
-            I am a Ph.D. candidate specializing in AI assurance, responsible AI concentrating on adversarial AI and an adjunct instructor. My professional background includes extensive experience in IT risk and compliance, GRC (Governance, Risk Management, and Compliance), and TPRM (Third Party Risk Management).
+            I am a Ph.D. candidate specializing in Machine Learning, Generative AI, AI assurance, responsible AI concentrating on adversarial AI and an adjunct instructor. My professional background includes extensive experience in IT risk and compliance, GRC (Governance, Risk Management, and Compliance), and TPRM (Third Party Risk Management).
             I bring a profound understanding of machine learning, generative AI, and the critical aspects of AI assurance. This includes managing risks, ensuring ethical development, and mitigating bias in AI systems. My strong theoretical foundation is coupled with practical skills in programming, data analysis, and threat modeling, making me a valuable asset to any team seeking to develop and deploy trustworthy AI.
           </p>
         </div>
