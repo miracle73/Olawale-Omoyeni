@@ -13,6 +13,7 @@ import Background from '../public/image/Background.png'
 import Background2 from '../public/image/Background2.png'
 import { FaLinkedinIn } from "react-icons/fa";
 import { RiMediumFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
 const HomePage = () => {
 
   const [selectedItem, setSelectedItem] = useState('Home');
@@ -385,6 +386,9 @@ const HomePage = () => {
             </Link>
             <Link to='https://x.com/Waleomoyeni1?t=jE6uUR5D866-5zQkoee9FA&s=08' target='_blank'>
               <FaXTwitter className='text-white max-md:h-3 max-md:w-3' />
+            </Link>
+            <Link to='https://github.com/Olahubert' target='_blank'>
+              <FaGithub className='text-white max-md:h-3 max-md:w-3' />
             </Link>
           </div>
         </div>
