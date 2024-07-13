@@ -201,10 +201,11 @@ const HomePage = () => {
                   <p className='font-[700] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px]  text-[#FFFFFF] whitespace-normal'>University of the People – Pasadena, California</p>
                   <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#3A49A4] whitespace-normal'>Online Adjunct Instructor</p>
                   <p className='font-[400] italic font-[Poppins] text-[14px] text-[#FFFFFF] whitespace-normal'>February 2024 - Present</p>
-                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal pt-5'>· Facilitates weekly discussion board threads for students in Information Security/Cybersecurity and Information Technology graduate programs.</p>
-                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Grade assignments and provide feedback within 72 hours of due dates. </p>
-                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Responds to student inquiries within 24 hours. </p>
-
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal pt-5'>· Currently serving as an instructor for online graduate programs in Artificial Intelligence, Big Data, Systems & Application Security, Operating Systems I and II, Computer Systems and Information Technology utilizing moodle platform.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Participates and facilitates weekly discussion board threads for students.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Grades all students' assignments with feedback and return to students within 72 hours of the due date.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Respond to student emails within 24 hours or less.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Answer student questions relating to course content, exam answer explanation, and/or general course inquiries within 24 hours.</p>
                 </div>
               </div>
               <div id="sliderItem" className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block hover:scale-105 ease-in-out duration-300 mx-3'>
