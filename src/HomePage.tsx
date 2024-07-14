@@ -263,7 +263,7 @@ const HomePage = () => {
           <div className='flex flex-row justify-between items-start px-5 h-80 pt-10 max-md:flex-col'>
             <div className='w-1/2 max-md:w-[100%] h-full pr-20 flex flex-col justify-between'>
               <div>
-                <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>University Of the Cumberlands - Williamsburg, KY
+                <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>University of the Cumberlands - Williamsburg, KY
                 </p>
                 <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#3A49A4]'>Doctor of Philosophy (Ph.D.) Information Technology
                 </p>
@@ -272,16 +272,6 @@ const HomePage = () => {
                 <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>May 2023 – Dec 2025(4.0GPA)
                 </p>
               </div>
-              <div className='mt-10'>
-                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>PC AGE Career Institute - Jersey City, NJ
-                </p>
-                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#3A49A4]'>Certificate in Information Technology
-                </p>
-              </div>
-
-            </div>
-            <img src={Frame} className='max-md:hidden' />
-            <div className='w-1/2 max-md:w-[100%] pl-20  max-md:pl-0 max-md:mt-10 flex flex-col h-full justify-between'>
               <div className='w-full'>
                 <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>Grand Canyon University - Phoenix, AZ
                 </p>
@@ -292,6 +282,18 @@ const HomePage = () => {
                 <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#3A49A4]'>Cybersecurity
                 </p>
                 <p className='font-[400] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>Completed 2022 (3.96 GPA)
+                </p>
+              </div>
+
+            </div>
+            <img src={Frame} className='max-md:hidden' />
+            <div className='w-1/2 max-md:w-[100%] pl-20  max-md:pl-0 max-md:mt-10 flex flex-col h-full justify-between'>
+
+
+              <div className='mt-10'>
+                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-white'>PC AGE Career Institute - Jersey City, NJ
+                </p>
+                <p className='font-[450] font-[Poppins] text-[16px] max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#3A49A4]'>Certificate in Information Technology
                 </p>
               </div>
 
