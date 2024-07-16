@@ -122,13 +122,21 @@ const HomePage = () => {
             <p className='text-[#9259F7] font-[600] text-[36px] max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'> Area of expertise </p>
             <img src={Vector} className='mt-6' />
           </div>
-
-          <div className='flex max-sm:my-3 flex-row justify-between max-md:flex-col items-start px-5 h-20'>
+          <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]   text-white'>· IT General Controls (ITGCs) and Security Risk Assessment</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Machine Learning</p>
             </div>
-            <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Vendor Risk Management and Continous Monitoring</p>
+            <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Statistical Analysis</p>
+            </div>
+          </div>
+          <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
+            <div className='w-[47%] max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Large Language Model (LLM)</p>
+            </div>
+            <div className='w-[47%] max-sm:pt-3 ma  max-md:w-[100%]'>
+
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Deep Learning</p>
             </div>
           </div>
           <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
@@ -140,53 +148,46 @@ const HomePage = () => {
 
             </div>
           </div>
-          <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
-            <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Ethical AI Techniques</p>
-            </div>
-            <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Deep Learning</p>
-            </div>
-          </div>
-          <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
-            <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Large Language Model (LLM)</p>
-            </div>
-            <div className='w-[47%] max-sm:pt-3 ma  max-md:w-[100%]'>
-
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Generative AI</p>
-            </div>
-          </div>
-          <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
-            <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Machine Learning</p>
-            </div>
-            <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Project Management </p>
-            </div>
-          </div>
-          <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
-            <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Statistical Analysis</p>
-            </div>
-            <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· NIST Cybersecurity Framework, ISO27001, PCI DSS, SOC1 and SOC 2</p>
-            </div>
-          </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-24'>
             <div className='w-[47%] max-md:w-[100%]'>
               <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Natural Language Processing (NLP)</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· AI Ethics and Governance</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Generative AI</p>
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Responsible AI</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Computer Vision</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Computer Vision</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Responsible AI</p>
+            </div>
+          </div>
+          <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
+            <div className='w-[47%] max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Ethical AI Techniques</p>
+            </div>
+            <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· AI Ethics and Governance</p>
+            </div>
+          </div>
+
+          <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
+            <div className='w-[47%] max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Project Management </p>
+            </div>
+            <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Vendor Risk Management and Continous Monitoring</p>
+            </div>
+          </div>
+
+          <div className='flex max-sm:my-3 flex-row justify-between max-md:flex-col items-start px-5 h-20'>
+            <div className='w-[47%] max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]   text-white'>· IT General Controls (ITGCs) and Security Risk Assessment</p>
+            </div>
+            <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· NIST Cybersecurity Framework, ISO27001, PCI DSS, SOC1 and SOC 2</p>
             </div>
           </div>
 
@@ -339,7 +340,14 @@ const HomePage = () => {
           <p className='text-[#9259F7] font-[600] text-[36px] max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'>SKILLS</p>
           <p className='font-[Poppins] font-[500] text-[16px]  max-xl:text-[14px] max-lg:text-[12px] max-md:text-[10px] text-[#FFFFFF] mt-10 max-md:mt-6 px-20 max-xl:px-10 max-sm:px-4'>
 
-            OpenAI · GPT · TensorFlow · Pytorch · IBM Fairness 360 · STRIDE threat modeling framework · Data Analysis & Visualization · Python · SQL · Keras · Scikit-learn · PowerBI · Jupyter Notebooks · Git · Linux · Microsoft Office Suite · Wrike · Pandas · NumPy · Matplotlib · Seaborn · Tableau · Power BI · Machine Learning · Deep Learning · Python · NLP · Transformers · GANs · VAEs · GPT-3 · GPT-4 · BERT · Prompt Engineering · Model Training · Fine-Tuning · Transfer Learning · OpenCV · Image Classification · Feature Extraction · Data Preprocessing · Data Augmentation · Ethical AI · Bias Mitigation · API Integration · Scalability ·  Evaluation Metrics · Model Validation ·  Generative Adversarial Networks · Variational Autoencoders · Autoregressive Models · Responsible AI Principles · AI Governance · Bias Detection · Bias Mitigation · Ethical AI Frameworks · AI Risks · AI algorithm audit · HuggingFace · Third-party Risk Assesment · IT General Controls · JASP
+            PowerBI <span className='text-[#9259F7]'>·</span> Wrike <span className='text-[#9259F7]'>·</span> Microsoft Office Suite <span className='text-[#9259F7]'>·</span> Tableau <span className='text-[#9259F7]'>·</span> Git <span className='text-[#9259F7]'>·</span> API Integration <span className='text-[#9259F7]'>·</span> Linux <span className='text-[#9259F7]'>·</span> Data Analysis & Visualization <span className='text-[#9259F7]'>·</span> Python <span className='text-[#9259F7]'>·</span> SQL <span className='text-[#9259F7]'>·</span>
+            Machine Learning <span className='text-[#9259F7]'>·</span> Jupyter Notebooks <span className='text-[#9259F7]'>·</span>  Pandas <span className='text-[#9259F7]'>·</span> NumPy <span className='text-[#9259F7]'>·</span> Keras <span className='text-[#9259F7]'>·</span> Scikit-learn <span className='text-[#9259F7]'>·</span> Matplotlib <span className='text-[#9259F7]'>·</span> Seaborn <span className='text-[#9259F7]'>·</span> Feature Extraction <span className='text-[#9259F7]'>·</span> Data Preprocessing <span className='text-[#9259F7]'>·</span> Data Augmentation <span className='text-[#9259F7]'>·</span>  Deep Learning <span className='text-[#9259F7]'>·</span>
+            TensorFlow <span className='text-[#9259F7]'>·</span> Pytorch <span className='text-[#9259F7]'>·</span>  NLP <span className='text-[#9259F7]'>·</span> Transformers <span className='text-[#9259F7]'>·</span> GANs <span className='text-[#9259F7]'>·</span> VAEs <span className='text-[#9259F7]'>·</span> HuggingFace <span className='text-[#9259F7]'>·</span> Autoregressive Models <span className='text-[#9259F7]'>·</span>
+            OpenAI <span className='text-[#9259F7]'>·</span> GPT <span className='text-[#9259F7]'>·</span> GPT-3 <span className='text-[#9259F7]'>·</span> GPT-4 <span className='text-[#9259F7]'>·</span> BERT <span className='text-[#9259F7]'>·</span> OpenCV <span className='text-[#9259F7]'>·</span> Image Classification <span className='text-[#9259F7]'>·</span> Prompt Engineering <span className='text-[#9259F7]'>·</span> Model Training <span className='text-[#9259F7]'>·</span> Fine-Tuning
+            <span className='text-[#9259F7]'>·</span> Transfer Learning <span className='text-[#9259F7]'>·</span> Bias Mitigation <span className='text-[#9259F7]'>·</span> Bias Detection
+            <span className='text-[#9259F7]'>·</span> Scalability <span className='text-[#9259F7]'>·</span>  Evaluation Metrics <span className='text-[#9259F7]'>·</span> Model Validation <span className='text-[#9259F7]'>·</span> STRIDE threat modeling framework <span className='text-[#9259F7]'>·</span> IBM Fairness 360 <span className='text-[#9259F7]'>·</span> Ethical AI <span className='text-[#9259F7]'>·</span>
+            Responsible AI Principles <span className='text-[#9259F7]'>·</span> AI Governance <span className='text-[#9259F7]'>·</span> Ethical AI Frameworks
+            <span className='text-[#9259F7]'>·</span> AI Risks <span className='text-[#9259F7]'>·</span> AI algorithm audit <span className='text-[#9259F7]'>·</span> Third-party Risk Assesment <span className='text-[#9259F7]'>·</span> IT General Controls <span className='text-[#9259F7]'>·</span> JASP
           </p>
         </div>
 
