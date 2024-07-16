@@ -124,70 +124,70 @@ const HomePage = () => {
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Machine Learning</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Machine Learning</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Statistical Analysis</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Statistical Analysis</p>
             </div>
           </div>
           <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Large Language Model (LLM)</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Large Language Model (LLM)</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 ma  max-md:w-[100%]'>
 
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Deep Learning</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Deep Learning</p>
             </div>
           </div>
           <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>. Adversarial Machine Learning</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Adversarial Machine Learning</p>
             </div>
             <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· AI Security & Threat Modeling</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> AI Security & Threat Modeling</p>
 
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-24'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Natural Language Processing (NLP)</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Natural Language Processing (NLP)</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Generative AI</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Generative AI</p>
             </div>
           </div>
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Computer Vision</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Computer Vision</p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Responsible AI</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Responsible AI</p>
             </div>
           </div>
           <div className='flex max-sm:my-3 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Ethical AI Techniques</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Ethical AI Techniques</p>
             </div>
             <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· AI Ethics and Governance</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> AI Ethics and Governance</p>
             </div>
           </div>
 
           <div className='flex max-sm:my-6 flex-row justify-between  max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Project Management </p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Project Management </p>
             </div>
             <div className='w-[47%] max-sm:pt-3 max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· Vendor Risk Management and Continous Monitoring</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> Vendor Risk Management and Continous Monitoring</p>
             </div>
           </div>
 
           <div className='flex max-sm:my-3 flex-row justify-between max-md:flex-col items-start px-5 h-20'>
             <div className='w-[47%] max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]   text-white'>· IT General Controls (ITGCs) and Security Risk Assessment</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]   text-white'><span className='text-[#9259F7]'>·</span> IT General Controls (ITGCs) and Security Risk Assessment</p>
             </div>
             <div className='w-[47%] max-sm:pt-3  max-md:w-[100%]'>
-              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'>· NIST Cybersecurity Framework, ISO27001, PCI DSS, SOC1 and SOC 2</p>
+              <p className='font-[400] font-[Poppins] text-[18px] max-xl:text-[16px] max-lg:text-[14px] max-md:text-[12px]  text-white'><span className='text-[#9259F7]'>·</span> NIST Cybersecurity Framework, ISO27001, PCI DSS, SOC1 and SOC 2</p>
             </div>
           </div>
 
