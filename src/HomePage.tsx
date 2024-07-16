@@ -51,7 +51,7 @@ const HomePage = () => {
   return (
     <div className="bg-black min-h-screen bg-no-repeat w-full pt-10 " style={{ backgroundImage: `url(${Background})` }}>
 
-      <div className='w-full flex fixed top-10 flex-row justify-center items-center px-20 max-xl:px-10 max-sm:px-4'>
+      <div className='w-full flex fixed top-10 flex-row justify-center items-center px-20 max-xl:px-10 max-sm:px-4 z-10'>
         <div className='h-14 max-xl:h-12 max-lg:h-10 max-md:h-8 w-1/2 max-lg:w-[65%] max-sm:w-3/4 max-xsm:w-[80%] max-xsxl:w-[92%] rounded-[25px] border-[0.03px] border-[#CBCBCB] bg-[#171717] flex flex-row justify-between items-center  px-10 max-lg:px-7 max-md:px-5 max-sm:px-3'>
           <Link to="/"
             className={`font-[400] text-[15px] max-xl:text-[13px] max-lg:text-[11px] max-md:text-[9px] max-xsm:text-[8px] font-[Poppins] text-white ${selectedItem === 'Home' ? 'bg-[#9259F7] px-1 py-1 md:px-2  md:py-2 rounded-2xl md:rounded-[22px]' : ''
