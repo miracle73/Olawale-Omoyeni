@@ -219,6 +219,22 @@ const HomePage = () => {
                 </div>
               </div>
               <div id="sliderItem" className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block hover:scale-105 ease-in-out duration-300 mx-3'>
+                <div className=" bg-[#111111]  h-fit rounded-[15px]  border border-[#1E2D3D] p-4 max-sm:p-2 " >
+                  <p className='font-[700] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>University of the Cumberlands - Williamsburg, Kentucky</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#3A49A4] whitespace-normal'>Artificial Intelligence Researcher  <span className='text-[#FFFFFF]'>·</span> Part-time</p>
+                  <p className='font-[400] italic font-[Poppins] text-[14px] text-[#FFFFFF] whitespace-normal'>May 2023 - Present</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal pt-5'>· Develop and simulate AI models to test and validate theories and concepts.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Enhance algorithm performance and accuracy.
+                  Analyze datasets using advanced statistical methods.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Validate AI model effectiveness with tools like JASP and Python.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Review existing research to identify knowledge gaps and formulate research questions.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Apply machine learning techniques for data analysis and model improvement.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Test and refine hypotheses for robust AI models.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Prepare and present research findings in academic journals and conferences.</p>
+                  <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Participate in peer review to ensure research quality.</p>
+                </div>
+              </div>
+              <div id="sliderItem" className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block hover:scale-105 ease-in-out duration-300 mx-3'>
                 <div className=" bg-[#111111]  h-fit rounded-[15px]  border border-[#1E2D3D] p-4 max-sm:p-2" >
                   <p className='font-[700] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>Sun Communities & Sun Outdoors – Southfield, Michigan</p>
                   <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#3A49A4] whitespace-normal'>Senior IT Controls Analyst</p>
