@@ -107,12 +107,12 @@ const HomePage = ({ blogss, loading, error }: BlogProps) => {
                     console.log(theDate)
                     return (
                         <Link to={`/newsletter/${blog.id}`} className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5 ' key={index}>
-                            <div style={{ backgroundImage: `url(${yet})` }} className=" rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative  border-2 border-white">
+                            <div style={{ backgroundImage: `url(${yet})` }} className=" rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
 
                             </div>
                             <div className='py-2 '>
                                 <div className='bg-[#F2F4F7] rounded-3xl h-fit w-fit p-3 flex flex-row justify-center items-center'>
-                                    <p className='text-[#000000] font-[400] font-[Inter] text-[15px] max-lg:text-[13px] max-md:text-[11px] max-sm:text-[9px]'>
+                                    <p className='text-[#000000] font-[400] font-[Inter] text-[15px] max-lg:text-[13px] max-md:text-[11px] max-sm:text-[9px] text-center'>
                                         {blog.attributes.Title.length > 30
                                             ? `${blog.attributes.Title.slice(0, 30)}...`
                                             : blog.attributes.Title}

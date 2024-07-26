@@ -12,7 +12,7 @@ import { RiMediumFill } from "react-icons/ri";
 import 'prismjs'; // Import the core library  
 //@ts-ignore
 // @ts-expect-error
-import remarkPrism from 'remark-prism';  
+import remarkPrism from 'remark-prism';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';  // Import the plugin  
 import { useBlogContext } from './DataContext';
@@ -21,8 +21,29 @@ interface Params extends Record<string, string | undefined> {
     id: string;
 }
 
+interface BlogAttributes {
+    createdAt: string;
+    Title: string;
+    Content: string;
+    CoverPicture: {
+        data: {
+            attributes: {
+                url: string;
+            };
+        };
+    };
+    Category: string;
+}
+
+interface Blog {
+    id: string;
+    attributes: BlogAttributes;
+}
+
 interface BlogProps {
-    blogss: any;
+    blogss: {
+        data: Blog[];
+    } | null;
     loading: boolean;
     error: string;
 }
@@ -34,6 +55,7 @@ const HomePage = ({ blogss, loading, error }: BlogProps) => {
     const location = useLocation();
     console.log(id)
     console.log(blogss)
+
     useEffect(() => {
         console.log(blogss); // Add this to debug
         if (blogss && blogss.data) {
@@ -49,16 +71,23 @@ const HomePage = ({ blogss, loading, error }: BlogProps) => {
         }
     }, [blogss, error, loading, toggleLoading, toggleError, toggleBlog]);
     console.log(blogsss)
+    let blog: Blog | null = null;
 
-    let blog = {}
-    if (blog) {
-        let arr = blogsss.filter((blog: any) => blog.id == id)
-        blog = arr[0]
-
-    } else {
-        blog = {}
+    if (blogsss.length > 0) { // Check if blogsss array has elements
+        let arr = blogsss.filter((blogItem: Blog) => blogItem.id == id); // Use the correct type for filtering
+        blog = arr[0]; // Assign the first item if exists
     }
-    console.log(blog)
+
+    console.log(blog);
+    // let blog = {}
+    // if (blog) {
+    //     let arr = blogsss.filter((blog: any) => blog.id == id)
+    //     blog = arr[0]
+
+    // } else {
+    //     blog = {}
+    // }
+    // console.log(blog)
     useEffect(() => {
         if (location.pathname === `/newsletter/${id}`) {
             setSelectedItem('Newsletters');
@@ -90,18 +119,25 @@ const HomePage = ({ blogss, loading, error }: BlogProps) => {
         // }
     }, []);
     // const data = blogss.data
-    const isoDate = blog.attributes.createdAt;
-    const date = new Date(isoDate);
+    const isoDate = blog?.attributes?.createdAt; // Optional chaining ensures safety when accessing nested properties
+    const date = new Date(isoDate ?? ''); // Provide a fallback value ('') in case isoDate is undefined
 
-    const options: any = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    };
-
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' }; // Specify the type for options
 
     const theDate = date.toLocaleDateString('en-US', options);
-    console.log(theDate)
+    console.log(theDate);
+    // const isoDate = blog?.attributes?.createdAt;
+    // const date = new Date(isoDate);
+
+    // const options: any = {
+    //     year: 'numeric',
+    //     month: 'long',
+    //     day: 'numeric'
+    // };
+
+
+    // const theDate = date.toLocaleDateString('en-US', options);
+    // console.log(theDate)
 
     return (
         <div className="bg-black min-h-screen w-full pt-10 " style={{ backgroundImage: `url(${BackgroundImage})` }}>
@@ -142,21 +178,21 @@ const HomePage = ({ blogss, loading, error }: BlogProps) => {
 
             <div className='flex flex-col justify-start items-start mt-16 mx-10 max-md:mx-4'>
                 <p className='font-[Poppins] font-[600] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-[#FFFFFF]'>{'Newsletter'}</p>
-                <p className='text-[#3A49A4] font-[Poppins] font-[600] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px]'>{blog.attributes.Title}</p>
+                <p className='text-[#3A49A4] font-[Poppins] font-[600] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px]'>{blog?.attributes.Title}</p>
             </div>
             <div className='min-h-fit mx-10 mt-10 max-md:mx-4 bg-[#100F0F] border-5 border-[#161616] p-5 rounded-[30px]'>
                 <p className='font-[Inter] font-[600] text-[14px] max-lg:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-[#6941C6]'>{theDate}</p>
-                <p className='font-[Inter] font-[700] text-[36px] max-lg:text-[33px] max-md:text-[27px] max-sm:text-[24px] text-[#FFFFFF] mt-5'>{blog.attributes.Title}</p>
+                <p className='font-[Inter] font-[700] text-[36px] max-lg:text-[33px] max-md:text-[27px] max-sm:text-[24px] text-[#FFFFFF] mt-5'>{blog?.attributes.Title}</p>
                 {/* <p className='font-[Inter] font-[400] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-[#FFFFFF] mt-5'>
 
                 </p> */}
                 <div className="markdown-container">
                     <ReactMarkdown
-                    remarkPlugins={[remarkGfm]} >
-                        {blog.attributes.Content}
+                        remarkPlugins={[remarkGfm]} >
+                        {blog?.attributes.Content}
                     </ReactMarkdown>
                 </div>
-              
+
 
             </div>
             <p className='font-[600] font-[Poppins] text-[24px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[12px] text-white pt-20 mx-10 max-md:mx-4'>Recent Newsletters</p>
@@ -165,7 +201,7 @@ const HomePage = ({ blogss, loading, error }: BlogProps) => {
                     {loading && <p>Loading...</p>}
                     {error && <p> </p>}
                     {blogsss && blogsss.map((blog: any, index: any) => {
-                        const yet = `http://localhost:1337${blog.attributes.CoverPicture.data.attributes.url}`
+                        const yet = `${blog.attributes.CoverPicture.data.attributes.url}`
                         console.log(yet)
                         const isoDate = blog.attributes.createdAt;
                         const date = new Date(isoDate);

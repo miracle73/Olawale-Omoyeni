@@ -26,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage blogss={data || []} error={error || ""} loading={loading || false} />} />
           <Route path="/newsletters" element={<Blog blogss={data || []} error={error || ""} loading={loading || false} />} />
-          <Route path="/newsletter/:id" element={<Newsletter blogss={data || []} error={error || ""} loading={loading || false} />} />
+          <Route path="/newsletter/:id" element={<Newsletter blogss={data} error={error || ""} loading={loading || false} />} />
         </Routes>
       </Router>
     </BlogProvider>
