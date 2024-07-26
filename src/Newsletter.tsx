@@ -1,25 +1,64 @@
 import { useState, useEffect } from 'react'
 import './App.css';
-import BlogImage from '../public/image/mode.png'
+
 import Telephone from '../public/image/telephone.png'
-import Perimeter from '../public/image/perimeter.png'
+
 import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import BackgroundImage from '../public/image/real.png'
 import { FaLinkedinIn } from "react-icons/fa";
 import { RiMediumFill } from "react-icons/ri";
 
+import 'prismjs'; // Import the core library  
+//@ts-ignore
+// @ts-expect-error
+import remarkPrism from 'remark-prism';  
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';  // Import the plugin  
+import { useBlogContext } from './DataContext';
 
 interface Params extends Record<string, string | undefined> {
     id: string;
 }
 
+interface BlogProps {
+    blogss: any;
+    loading: boolean;
+    error: string;
+}
 
-const HomePage = () => {
+const HomePage = ({ blogss, loading, error }: BlogProps) => {
     const { id } = useParams<Params>();
+    const { blogs: blogsss, toggleBlog, toggleLoading, toggleError } = useBlogContext();
     const [selectedItem, setSelectedItem] = useState('Home');
     const location = useLocation();
     console.log(id)
+    console.log(blogss)
+    useEffect(() => {
+        console.log(blogss); // Add this to debug
+        if (blogss && blogss.data) {
+            toggleBlog(blogss.data);
+        }
+        if (error) {
+            toggleError(error);
+        }
+        if (loading) {
+            toggleLoading(loading);
+        } else {
+            toggleLoading(false);
+        }
+    }, [blogss, error, loading, toggleLoading, toggleError, toggleBlog]);
+    console.log(blogsss)
+
+    let blog = {}
+    if (blog) {
+        let arr = blogsss.filter((blog: any) => blog.id == id)
+        blog = arr[0]
+
+    } else {
+        blog = {}
+    }
+    console.log(blog)
     useEffect(() => {
         if (location.pathname === `/newsletter/${id}`) {
             setSelectedItem('Newsletters');
@@ -30,51 +69,6 @@ const HomePage = () => {
         setSelectedItem(item);
     };
 
-    const blogs = [
-        {
-            image: 'bg-myimage',
-            name: "App Design",
-            text1: "Jayesh Patil",
-            text2: "09 Oct, 2023",
-            text3: "Sugee: Loan Management System for Rural Sector."
-        },
-        {
-            image: 'bg-myimage',
-            name: " UI/ UX Design",
-            text1: "Jayesh Patil",
-            text2: "10 Nov, 2023",
-            text3: "Design Unraveled: Behind the Scenes of UI/UX Magic"
-        },
-        {
-            image: 'bg-myimage',
-            name: "App Design",
-            text1: "Jayesh Patil",
-            text2: "09 Oct, 2023",
-            text3: "Sugee: Loan Management System for Rural Sector."
-        },
-        {
-            image: 'bg-myimage',
-            name: " UI/ UX Design",
-            text1: "Jayesh Patil",
-            text2: "10 Nov, 2023",
-            text3: "Design Unraveled: Behind the Scenes of UI/UX Magic"
-        },
-        {
-            image: 'bg-myimage',
-            name: "App Design",
-            text1: "Jayesh Patil",
-            text2: "09 Oct, 2023",
-            text3: "Sugee: Loan Management System for Rural Sector."
-        },
-        {
-            image: 'bg-myimage',
-            name: " UI/ UX Design",
-            text1: "Jayesh Patil",
-            text2: "10 Nov, 2023",
-            text3: "Design Unraveled: Behind the Scenes of UI/UX Magic"
-        },
-
-    ]
 
 
     useEffect(() => {
@@ -95,6 +89,19 @@ const HomePage = () => {
         });
         // }
     }, []);
+    // const data = blogss.data
+    const isoDate = blog.attributes.createdAt;
+    const date = new Date(isoDate);
+
+    const options: any = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+
+
+    const theDate = date.toLocaleDateString('en-US', options);
+    console.log(theDate)
 
     return (
         <div className="bg-black min-h-screen w-full pt-10 " style={{ backgroundImage: `url(${BackgroundImage})` }}>
@@ -135,73 +142,80 @@ const HomePage = () => {
 
             <div className='flex flex-col justify-start items-start mt-16 mx-10 max-md:mx-4'>
                 <p className='font-[Poppins] font-[600] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-[#FFFFFF]'>{'Newsletter'}</p>
-                <p className='text-[#3A49A4] font-[Poppins] font-[600] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px]'>Grid system for better Design User Interface</p>
+                <p className='text-[#3A49A4] font-[Poppins] font-[600] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px]'>{blog.attributes.Title}</p>
             </div>
             <div className='min-h-fit mx-10 mt-10 max-md:mx-4 bg-[#100F0F] border-5 border-[#161616] p-5 rounded-[30px]'>
-                <p className='font-[Inter] font-[600] text-[14px] max-lg:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-[#6941C6]'>Sunday , 1 Jan 2023</p>
-                <p className='font-[Inter] font-[700] text-[36px] max-lg:text-[33px] max-md:text-[27px] max-sm:text-[24px] text-[#FFFFFF] mt-5'>Grid system for better Design User Interface</p>
-                <p className='font-[Inter] font-[400] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-[#FFFFFF] mt-5'>
-                    A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements. Grid systems are used to create a consistent look and feel across a website, and can help to make the layout more visually appealing and easier to navigate.
-                    If you’ve been to New York City and have walked the streets, it is easy to figure out how to get from one place to another because of the grid system that the city is built on. Just as the predictability of a city grid helps locals and tourists get around easily, so do webpage grids provide a structure that guides users and designers alike. Because of their consistent reference point, grids improve page readability and scannability and allow people to quickly get where they need to go.
-                    There are three common grid types used in websites and interfaces: column grid, modular grid, and hierarchical grid.
-                    Column grid involves dividing a page into vertical columns. UI elements and content are then aligned to these columns.
-                    Modular grid extends the column grid further by adding rows to it. This intersection of columns and rows make up modules to which elements and content are aligned. Modular grids are great for ecommerce and listing pages, as rows are repeatable to accommodate browsing.
-                    Hierarchical grid: Content is organized by importance using columns, rows, and modules. The most important elements and pieces of content take up the biggest pieces of the grid.
-                    Breaking Down the Grid
-                </p>
-                
-                <img src={Perimeter} className='mt-3' />
-                <p className='font-[Inter] font-[400] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-[#FFFFFF] mt-5'>
-                    Regardless of the type of grid you are using, the grid is made up of three elements: columns, gutters, and margins.
-                    Columns: Columns take up most of the real estate in a grid. Elements and content are placed in columns. To adapt to any screen size, column widths are generally defined with percentages rather than fixed values and the number of columns will vary. For example, a grid on a mobile device might have 4 columns and a grid on a desktop might have 12 columns.
-                    Gutters: The gutter is the space between columns that separates elements and content from different columns. Gutter widths are fixed values but can change based on different breakpoints. For example, wider gutters are appropriate for larger screens, whereas smaller gutters are appropriate for smaller screens like mobile.
-                    Three elements make up any grid: (1) columns, (2) gutters, and (3) margins.
-                    Examples of Grids in Use
-                    Example 1: Hierarchical Grid
-                    Our first example is from The New York Times. This screen utilizes a hierarchical grid to create a newspaper-like reading experience. At desktop screen size, two main columns make up the hierarchical grid. The most important news story takes up the most space in the grid, the left column, followed by secondary and tertiary stories, which take up the smaller column and modules on the right.
-                    Always place content within columns, not gutters. The gutters should remain empty as you place elements on the grid in order to clearly separate and align content and elements.
-                </p>
+                <p className='font-[Inter] font-[600] text-[14px] max-lg:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-[#6941C6]'>{theDate}</p>
+                <p className='font-[Inter] font-[700] text-[36px] max-lg:text-[33px] max-md:text-[27px] max-sm:text-[24px] text-[#FFFFFF] mt-5'>{blog.attributes.Title}</p>
+                {/* <p className='font-[Inter] font-[400] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-[#FFFFFF] mt-5'>
+
+                </p> */}
+                <div className="markdown-container">
+                    <ReactMarkdown
+                    remarkPlugins={[remarkGfm]} >
+                        {blog.attributes.Content}
+                    </ReactMarkdown>
+                </div>
+              
+
             </div>
             <p className='font-[600] font-[Poppins] text-[24px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[12px] text-white pt-20 mx-10 max-md:mx-4'>Recent Newsletters</p>
             <div className='flex flex-col mx-10 max-md:mx-4 items-center justify-between gap-4 relative pt-5'>
                 <div className='w-full  overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide ' >
+                    {loading && <p>Loading...</p>}
+                    {error && <p> </p>}
+                    {blogsss && blogsss.map((blog: any, index: any) => {
+                        const yet = `http://localhost:1337${blog.attributes.CoverPicture.data.attributes.url}`
+                        console.log(yet)
+                        const isoDate = blog.attributes.createdAt;
+                        const date = new Date(isoDate);
 
-                    {/* <div className="flex w-full flex-row gap-10 max-md:gap-14 max-sm:gap-0 flex-wrap justify-between max-md:justify-around max-sm:justify-between items-center px-20 max-xl:px-10 max-sm:px-4 mt-10"> */}
-                    {blogs.map((blog, index) => {
+                        const options: any = {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        };
+
+                        const theDate = date.toLocaleDateString('en-US', options);
+                        console.log(theDate)
                         return (
-                            <div id="sliderItem" key={index} className='w-[40%] max-lg:w-[50%] max-sm:w-[55%] max-xsm:w-[65%] relative overflow-hidden shadow-md pb-2 rounded-md hover:cursor-pointer inline-block mx-3'>
-                                <Link to='/newsletter/43' className='pt-5'>
-                                    <div style={{ backgroundImage: `url(${BlogImage})` }} className="rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
+                            <div className='w-[25%]  pb-5 max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5 ' >
+                                <Link to={`/newsletter/${blog.id}`} key={index}>
+                                    <div style={{ backgroundImage: `url(${yet})` }} className=" rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative  ">
 
                                     </div>
-                                    <div className='py-2 '>
+                                    <div className='py-2 whitespace-nowrap'>
                                         <div className='bg-[#F2F4F7] rounded-3xl h-fit w-fit p-3 flex flex-row justify-center items-center'>
-                                            <p className='text-[#000000] font-[400] font-[Inter] text-[15px] max-lg:text-[13px] max-md:text-[11px] max-sm:text-[9px]'>{blog.name}</p>
+                                            <p className='text-[#000000] font-[400] font-[Inter] text-[15px] max-lg:text-[13px] max-md:text-[11px] max-sm:text-[9px]'>
+                                                {blog.attributes.Title.length > 30
+                                                    ? `${blog.attributes.Title.slice(0, 30)}...`
+                                                    : blog.attributes.Title}
+                                            </p>
                                         </div>
-                                        <div className=' flex flex-row justify-start items-center  gap-4 py-3'>
+                                        <div className=' flex flex-row justify-start items-center max-lg:flex-col  max-md:flex-row max-xsm:flex-col max-md:items-center max-xsm:items-start max-lg:items-start gap-4 py-3'>
                                             <div className=' flex flex-row justify-start items-center gap-2'>
                                                 <div className='h-[7px] w-[7px] rounded-md bg-[#FD853A]'></div>
-                                                <p className='font-[400] font-[Inter] text-[16px]  max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{blog.text1}</p>
+                                                <p className='font-[400] font-[Inter] text-[16px]  max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{theDate}</p>
                                             </div>
                                             <div className=' flex flex-row justify-start items-center gap-2'>
                                                 <div className='h-[7px] w-[7px] rounded-md bg-[#FD853A]'></div>
-                                                <p className='font-[400] font-[Inter] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{blog.text2}</p>
+                                                <p className='font-[400] font-[Inter] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{blog.attributes.Category}</p>
                                             </div>
                                         </div>
-                                        <p className='text-[#FFFFFF]  whitespace-normal font-[400] font-[Poppins] text-[24px] max-lg:text-[18px] max-md:text-[14px] max-sm:text-[12px] pt-2'>{blog.text3}</p>
+                                        <p className='text-[#FFFFFF] overflow-hidden  whitespace-nowrap text-ellipsis w-[82%] font-[400] font-[Poppins] text-[24px] max-lg:text-[18px] max-md:text-[14px] max-sm:text-[12px] pt-2'>
+                                            {blog.attributes.Content.length > 50
+                                                ? `${blog.attributes.Content.slice(0, 50)}...`
+                                                : blog.attributes.Content}
+                                        </p>
+
+
                                     </div>
                                 </Link>
                             </div>
                         )
                     })}
-
-                    {/* </div> */}
                 </div>
-
-
             </div>
-
-
             <div className='mt-18 max-md:mt-14 pt-10 mx-10 max-md:mx-4'>
 
                 <p className='text-[#9259F7] font-[600] text-[36px]  max-xl:text-[33px] max-lg:text-[30px] max-md:text-[25px] font-[Poppins]'>CONTACT ME </p>

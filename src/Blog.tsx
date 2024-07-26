@@ -1,19 +1,41 @@
 import { useState, useEffect } from 'react'
 import './App.css';
 import Telephone from '../public/image/telephone.png'
-import BlogImage from '../public/image/mode.png'
 import BackgroundImage from '../public/image/real.png'
 import Mailbox from '../public/image/mailbox.png'
 import { Link, useLocation } from 'react-router-dom'
 import { FaLinkedinIn } from "react-icons/fa";
 import { RiMediumFill } from "react-icons/ri";
+import { useBlogContext } from './DataContext';
 
+interface BlogProps {
+    blogss: any;
+    loading: boolean;
+    error: string;
+}
 
-
-const HomePage = () => {
-
+const HomePage = ({ blogss, loading, error }: BlogProps) => {
+    const { blogs: blogsss, toggleBlog, toggleLoading, toggleError } = useBlogContext();
+  
     const [selectedItem, setSelectedItem] = useState('Home');
     const location = useLocation();
+    console.log(blogss)
+    // const data = blogss.data
+    useEffect(() => {
+        console.log(blogss); // Add this to debug
+        if (blogss && blogss.data) {
+            toggleBlog(blogss.data);
+        }
+        if (error) {
+            toggleError(error);
+        }
+        if (loading) {
+            toggleLoading(loading);
+        } else {
+            toggleLoading(false);
+        }
+    }, [blogss, error, loading, toggleLoading, toggleError, toggleBlog]);
+    console.log(blogsss)
 
     useEffect(() => {
         if (location.pathname === '/newsletters') {
@@ -24,52 +46,6 @@ const HomePage = () => {
     const handleClick = (item: any) => {
         setSelectedItem(item);
     };
-
-    const blogs = [
-        {
-            image: 'bg-myimage',
-            name: "App Design",
-            text1: "Jayesh Patil",
-            text2: "09 Oct, 2023",
-            text3: "Sugee: Loan Management System for Rural Sector."
-        },
-        {
-            image: 'bg-myimage',
-            name: " UI/ UX Design",
-            text1: "Jayesh Patil",
-            text2: "10 Nov, 2023",
-            text3: "Design Unraveled: Behind the Scenes of UI/UX Magic"
-        },
-        {
-            image: 'bg-myimage',
-            name: "App Design",
-            text1: "Jayesh Patil",
-            text2: "09 Oct, 2023",
-            text3: "Sugee: Loan Management System for Rural Sector."
-        },
-        {
-            image: 'bg-myimage',
-            name: " UI/ UX Design",
-            text1: "Jayesh Patil",
-            text2: "10 Nov, 2023",
-            text3: "Design Unraveled: Behind the Scenes of UI/UX Magic"
-        },
-        {
-            image: 'bg-myimage',
-            name: "App Design",
-            text1: "Jayesh Patil",
-            text2: "09 Oct, 2023",
-            text3: "Sugee: Loan Management System for Rural Sector."
-        },
-        {
-            image: 'bg-myimage',
-            name: " UI/ UX Design",
-            text1: "Jayesh Patil",
-            text2: "10 Nov, 2023",
-            text3: "Design Unraveled: Behind the Scenes of UI/UX Magic"
-        },
-
-    ]
 
 
     return (
@@ -113,27 +89,51 @@ const HomePage = () => {
             <p className='font-[600] font-[Poppins] text-[24px]  max-lg:text-[22px] max-md:text-[20px] max-sm:text-[18px] text-white pt-16 px-20 max-xl:px-10 max-sm:px-4'>All Newsletters</p>
 
             <div className="flex w-full flex-row gap-10 max-md:gap-14 max-sm:gap-0 flex-wrap justify-between max-md:justify-around max-sm:justify-between items-center px-20 max-xl:px-10 max-sm:px-4 mt-10">
-                {blogs.map((blog, index) => {
+                {loading && <p>Loading...</p>}
+                {error && <p> </p>}
+                {blogsss && blogsss.map((blog: any, index: any) => {
+                    const yet = `${blog.attributes.CoverPicture.data.attributes.url}`
+                    console.log(yet)
+                    const isoDate = blog.attributes.createdAt;
+                    const date = new Date(isoDate);
+
+                    const options: any = {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    };
+
+                    const theDate = date.toLocaleDateString('en-US', options);
+                    console.log(theDate)
                     return (
-                        <Link to='/newsletter/43' className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5' key={index}>
-                            <div style={{ backgroundImage: `url(${BlogImage})` }} className=" rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative">
+                        <Link to={`/newsletter/${blog.id}`} className='w-[25%] max-md:w-[40%] max-sm:w-[42%] max-xsm:w-[44%] max-xsxl:w-[46%] pt-5 ' key={index}>
+                            <div style={{ backgroundImage: `url(${yet})` }} className=" rounded-[20px] bg-no-repeat object-cover w-full h-40 flex flex-row justify-end items-end relative  border-2 border-white">
 
                             </div>
                             <div className='py-2 '>
                                 <div className='bg-[#F2F4F7] rounded-3xl h-fit w-fit p-3 flex flex-row justify-center items-center'>
-                                    <p className='text-[#000000] font-[400] font-[Inter] text-[15px] max-lg:text-[13px] max-md:text-[11px] max-sm:text-[9px]'>{blog.name}</p>
+                                    <p className='text-[#000000] font-[400] font-[Inter] text-[15px] max-lg:text-[13px] max-md:text-[11px] max-sm:text-[9px]'>
+                                        {blog.attributes.Title.length > 30
+                                            ? `${blog.attributes.Title.slice(0, 30)}...`
+                                            : blog.attributes.Title}
+                                    </p>
                                 </div>
                                 <div className=' flex flex-row justify-start items-center max-lg:flex-col  max-md:flex-row max-xsm:flex-col max-md:items-center max-xsm:items-start max-lg:items-start gap-4 py-3'>
                                     <div className=' flex flex-row justify-start items-center gap-2'>
                                         <div className='h-[7px] w-[7px] rounded-md bg-[#FD853A]'></div>
-                                        <p className='font-[400] font-[Inter] text-[16px]  max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{blog.text1}</p>
+                                        <p className='font-[400] font-[Inter] text-[16px]  max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{theDate}</p>
                                     </div>
                                     <div className=' flex flex-row justify-start items-center gap-2'>
                                         <div className='h-[7px] w-[7px] rounded-md bg-[#FD853A]'></div>
-                                        <p className='font-[400] font-[Inter] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{blog.text2}</p>
+                                        <p className='font-[400] font-[Inter] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{blog.attributes.Category}</p>
                                     </div>
                                 </div>
-                                <p className='text-[#FFFFFF] font-[400] font-[Poppins] text-[24px] max-lg:text-[18px] max-md:text-[14px] max-sm:text-[12px] pt-2'>{blog.text3}</p>
+                                <p className='text-[#FFFFFF] w-[88%] font-[400] font-[Poppins] text-[24px] max-lg:text-[18px] max-md:text-[14px] max-sm:text-[12px] pt-2'>
+                                    {blog.attributes.Content.length > 50
+                                        ? `${blog.attributes.Content.slice(0, 50)}...`
+                                        : blog.attributes.Content}
+                                </p>
+
                             </div>
                         </Link>
 

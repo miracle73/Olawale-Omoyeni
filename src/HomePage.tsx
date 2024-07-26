@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css';
 import AI_Image from '../public/image/AI.png'
 import SecondImage from '../public/image/Group.png'
-// import Specialist from '../public/image/Specialist.png'
+
 import { FaXTwitter } from "react-icons/fa6";
 import Vector from '../public/image/Vector.png'
 import Frame from '../public/image/Frame.png'
@@ -14,10 +14,33 @@ import Background2 from '../public/image/Background2.png'
 import { FaLinkedinIn } from "react-icons/fa";
 import { RiMediumFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
-const HomePage = () => {
-
+import { useBlogContext } from './DataContext';
+interface BlogProps {
+  blogss: any;
+  loading: boolean;
+  error: string;
+}
+const HomePage = ({ blogss, loading: firstLoading, error: firstError }: BlogProps) => {
+  const { toggleBlog,toggleLoading, toggleError} = useBlogContext();
   const [selectedItem, setSelectedItem] = useState('Home');
   const location = useLocation();
+  console.log(blogss)
+  // const data = blogss.data
+  useEffect(() => {
+    console.log(blogss); // Add this to debug
+    if (blogss && blogss.data) {
+      toggleBlog(blogss.data);
+    }
+    if (firstError) {
+      toggleError(firstError);
+    }
+    if (firstLoading) {
+      toggleLoading(firstLoading);
+    } else {
+      toggleLoading(false);
+    }
+  }, [blogss, firstError, firstLoading,toggleLoading, toggleError, toggleBlog]);
+
 
   useEffect(() => {
     if (location.pathname === '/blog') {
@@ -225,7 +248,7 @@ const HomePage = () => {
                   <p className='font-[400] italic font-[Poppins] text-[14px] text-[#FFFFFF] whitespace-normal'>May 2023 - Present</p>
                   <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal pt-5'>· Develop and simulate AI models to test and validate theories and concepts.</p>
                   <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Enhance algorithm performance and accuracy.
-                  Analyze datasets using advanced statistical methods.</p>
+                    Analyze datasets using advanced statistical methods.</p>
                   <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Validate AI model effectiveness with tools like JASP and Python.</p>
                   <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Review existing research to identify knowledge gaps and formulate research questions.</p>
                   <p className='font-[400] font-[Poppins] text-[14px] max-xl:text-[12px] max-lg:text-[10px] max-md:text-[8px] text-[#FFFFFF] whitespace-normal'>· Apply machine learning techniques for data analysis and model improvement.</p>
