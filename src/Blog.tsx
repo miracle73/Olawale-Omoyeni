@@ -128,7 +128,7 @@ const HomePage = ({ blogss, loading, error }: BlogProps) => {
                                         <p className='font-[400] font-[Inter] text-[16px] max-lg:text-[14px] max-md:text-[12px] max-sm:text-[10px] text-white'>{blog.attributes.Category}</p>
                                     </div>
                                 </div>
-                                <p className='text-[#FFFFFF] w-[88%] font-[400] font-[Poppins] text-[24px] max-lg:text-[18px] max-md:text-[14px] max-sm:text-[12px] pt-2'>
+                                <p className='text-[#FFFFFF] w-[88%] font-[400] font-[Poppins] text-[15px] max-lg:text-[13px] max-md:text-[11px] max-sm:text-[9px] pt-2'>
                                     {blog.attributes.Content.length > 50
                                         ? `${blog.attributes.Content.slice(0, 50)}...`
                                         : blog.attributes.Content}
