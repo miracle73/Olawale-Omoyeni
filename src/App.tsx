@@ -5,7 +5,7 @@ import Newsletter from './Newsletter'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import useFetch from '../hooks/useFetch'
 import BlogProvider from './DataContext';
-import  {useEffect} from 'react'
+
 
 function App() {
 //   useEffect(() => {
