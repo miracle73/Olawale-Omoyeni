@@ -5,7 +5,7 @@ import Newsletter from './Newsletter'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import useFetch from '../hooks/useFetch'
 import BlogProvider from './DataContext';
-// import  {useEffect} from 'react'
+import  {useEffect} from 'react'
 
 function App() {
 //   useEffect(() => {
@@ -15,10 +15,31 @@ function App() {
 //     // // Refresh the page
 //     // window.location.reload();
 // }, []);
-  let { loading, data, error } = useFetch('https://capable-freedom-97da2f1754.strapiapp.com/api/blogs?populate=*')
+//https://capable-freedom-97da2f1754.strapiapp.com
+//https://airiskguardcms.com/api/blogs?populate=*
+  let { loading, data, error } = useFetch('https://airiskguardcms.com/api/blogs?populate=*')
   // if (loading) return <p>Loading...</p>
   // if (error) return <p>Error!</p>
   console.log(data)
+// const url = 'airiskguardcms.com/api/blogs?populate=*'
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const response = await fetch(url);
+//         if (!response.ok) {
+//           throw new Error('Network response was not ok');
+//         }
+//         const result = await response.json();
+//         console.log(result);
+//       } catch (error) {
+//         console.log(error.message);
+//       } finally {
+//         console.log(false);
+//       }
+//     };
+
+//     fetchData();
+//   }, [url]);
 
   return (
     <BlogProvider>
